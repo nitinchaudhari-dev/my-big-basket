@@ -1,0 +1,50 @@
+/* Container Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #fefcea, #f1da36);
+  color: #f30707;
+}
+
+/* Welcome Heading */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #1a0155;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Section Styling */
+.veg-section,
+.nonveg-section {
+  padding: 20px 40px;
+  margin: 0 auto;
+  max-width: 1000px;
+  border-radius: 12px;
+  background-color: #ffffffc9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Add spacing between Veg and Non-Veg */
+.nonveg-section {
+  margin-top: 10cm; /* or use a more reasonable value like 100px */
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .veg-section,
+  .nonveg-section {
+    padding: 16px 20px;
+  }
+
+  .nonveg-section {
+    margin-top: 80px;
+  }
+}

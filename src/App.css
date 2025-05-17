@@ -1,0 +1,84 @@
+/* Navbar Container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 12px 24px;
+  display: flex;
+  gap: 20px;
+  z-index: 500;
+  border-radius: 12px;
+  margin-top: 5px;
+  animation: slideDown 0.5s ease-out;
+}
+
+/* Navbar Animation */
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+/* Common Link Style */
+.navbar a {
+  
+  text-decoration: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+/* Hover Effect */
+.navbar a:hover {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: #ff0202;
+  
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 114, 255, 0.5);
+}
+
+/* Individual Link Styling (More Vibrant Colors) */
+.veg-link {
+  color: #ff1744;
+}
+
+.nonveg-link {
+  color: #ff1744;
+}
+
+.cart-link {
+  color: #ff9100;
+}
+
+.aboutus-link {
+  color: #00b0ff;
+}
+
+.contactus-link {
+  color: #ff6f00;
+}
+
+.orders {
+  color: #d500f9;
+}
+/* Page Padding to Avoid Overlap */
+body {
+  padding-top: 100px;
+  margin:50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #fceabb, #f8b500);
+}
+

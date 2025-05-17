@@ -1,0 +1,92 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body spacing to account for fixed navbar */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  padding-top: 70px;
+  background-color: #f9f9f9;
+}
+
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Animated bar at the bottom of navbar */
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 6px; /* thicker line */
+  width: 100%;
+  background: linear-gradient(to right, #4CAF50, #2196F3, #E91E63, #FF9800);
+  background-size: 200% auto;
+  animation: moveGradient 3s linear infinite;
+  z-index: 1001;
+}
+
+/* Gradient animation keyframes */
+@keyframes moveGradient {
+  0% { background-position: 0% center; }
+  100% { background-position: -200% center; }
+}
+
+/* Link styling */
+.nav-link {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Box shadow and hover styles */
+.nav-link:hover,
+.nav-link:focus {
+  background-color:#ac782b;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  cursor: pointer;  
+}
+
+/* Hover color per link */
+.nav-link[href*="Home"]:hover { background-color: #4CAF50; }
+.nav-link[href*="VegItems"]:hover { background-color: #8BC34A; }
+.nav-link[href*="NonVegItems"]:hover { background-color: #FF5722; }
+.nav-link[href*="Cart"]:hover { background-color: #2196F3; }
+.nav-link[href*="Chocolate"]:hover { background-color: #795548; }
+.nav-link[href*="Milk"]:hover { background-color: #3F51B5; }
+.nav-link[href*="Signing"]:hover { background-color: #9C27B0; }
+.nav-link[href*="Orders"]:hover { background-color: #009688; }
+.nav-link[href*="AboutUs"]:hover { background-color: #607D8B; }
+.nav-link[href*="ContactUs"]:hover { background-color: #E91E63; }
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .nav-link {
+    margin: 4px 0;
+  }
+}
